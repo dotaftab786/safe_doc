@@ -1,0 +1,143 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+	 BUSSINESS ASSET
+</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Jua|Do Hyeon|Nunito|Fascinate+Inline" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/business_asset.css">
+<link rel="stylesheet" href="css/animate.css">
+</head>
+<body> 
+  <div id="business_box">
+      <img src="images/con_pic.png" alt="con_pic" id="main_pic" width="100" style="position: fixed; top: 0; left: 0;" />
+  <div id="contact_pic"></div>
+  <h2 align="center" style="padding: 0; margin: 0; font-family: 'Nunito',sans-serif;font-weight:bold;">Business Management System</h2>
+  <h5 align="center" style="padding: 0; margin: 0; font-family: 'Nunito',sans-serif;font-weight: 550;">Manage your all business details like voucher,ledger,tax,balance sheet and many more</h5>    
+  </div>
+  <div id="asset_logo">
+  </div>
+  <h1 id="company_name"></h1>
+<div id="asset_box">
+  <button id="u_measure">
+    <div id="primary_content">
+  <i class="fa fa-balance-scale"></i>
+  &nbsp&nbsp&nbspUnit of measures
+</div>
+ <div id="secondary_content" style="display: none;">
+  <i class="fa fa-window-close" id="close_icon" style="float: right;background: red;margin-bottom: 5px;"></i>
+  <form id="form_sub">
+  <input required type="text" name="symbol" placeholder="Symbol eg:kg,pc">
+  <input required type="text" name="symbol" placeholder="Formal name">
+  <input type="submit" name="submit" value="set" id="set">
+</form>
+  </div>
+</button>
+<button id="tax_setup">
+  <i class="fa fa-calculator"></i>
+  &nbsp&nbsp&nbsp<span id="tax_link">Tax setup</span>
+  <i class="fa fa-window-close" id="close_tax" style="float: right; color:red;display: none;"></i>
+  <form id="tax_form" autocomplete="off" style="display: none;">
+    <input required="required" type="text" name="tax" id="tax_value" placeholder="Tax name">
+    <input required="required" type="text" name="percentage" id="tax_percentage" placeholder="5%">
+    <input type="submit" name="submit" value="Done" id="submit_tax" style="width:95%;background:blue;color: white;border:none;">
+  </form>
+</button>
+  <button id="s_voucher">
+  <i class="fa fa-money"></i>
+  &nbsp&nbsp&nbspSales voucher</button>
+  <button id="shut_company">
+  <i class="fa fa-window-close"></i>
+  &nbsp&nbsp&nbspShut Company</button>
+</div>
+<div id="voucher_model">
+  <button id="voucher_icon">
+  <i class="fa fa-window-close" id="cls_window"></i>
+  Close Invoice</button>
+  <table id="voucher_table" style="width:100%;float: left;border:none;margin-top: 10px; padding: 10px;">
+   <tr>
+    <td style="background: black;color:white;float: left; width: 50%;padding: 7px;border:none;">Sales voucher:130</td>
+  <td style="float:right;background: black;color:white; width: 50%; text-align: right;padding: 7px;border:none;" id="dte">Date:</td>
+   </tr>
+   <tr>
+    <td id="company_details" style="float: left;width: 90%;padding: 7px;font-family: 'Nunito',sans-serif;"></td>
+     <td id="company_logo_details" style="float: right;width: 10%;padding: 7px;">
+      <img id="img_logo">
+     </td>
+   </tr>
+   <tr>
+    <td style="border:none;">
+   <form id="voucher_field">
+      <h3>Name</h3>
+     <input type="text" name="username">
+      <h3>Email</h3>
+     <input type="email" name="email">
+      <h3>Address</h3>
+     <input type="text" name="address">
+      <h3>Mobile</h3>
+     <input type="number" name="mobile">
+ </form>
+</td>
+</tr>
+ <tr id="input_data">
+  <td>Description</td>
+  <td>Price</td>
+  <td>Qty</td>
+  <td>Amount</td>
+  <td>Del</td>
+ </tr>
+ <!-- <tr id="input_field">
+  <td><input type="text"name="user"></td>
+  <td><input type="text"name="user"></td>
+  <td><input type="text"name="user"></td>
+  <td><input type="text"name="user"></td>
+  <td id="del_item"><i class="fa fa-trash"></i></td>
+ </tr> -->
+  </table>
+  <button id="add_item">
+<i class="fa fa-plus" style="background: black; color: white;padding: 3px;border-radius: 3px;"></i>
+  Add Item</button>
+  <div id="tax_box">
+    <div id="tax_left_cont">
+    </div>
+    <div id="tax_right_cont">
+      <table id="tax_right_box">
+        <tr>
+          <td style="border:1px solid #fff;width:300px;">Sub total</td>
+          <td style="border:1px solid #fff;width: 200px;" id="s_total">
+            <i class="fa fa-rupee">&nbsp0.00</i>
+          </td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #fff;width:300px;" id="td_box"></td>
+          <td style="border:1px solid #fff;width: 200px;" id="td_box2"></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #fff;width:300px;">Total</td>
+          <td style="border:1px solid #fff;width: 200px;"id="total_cost">
+            <i class="fa fa-rupee">&nbsp0.00</i>
+          </td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #fff;width:300px;">Paid</td>
+          <td style="border:1px solid #fff;width: 200px;">
+            <i class="fa fa-rupee"></i>
+            <input type="number" name="Amount" style="width: 100px;height: 30px;background: inherit;border:1px solid #ccc;" placeholder="Amount" id="paid_amount">
+          </td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #fff;width:300px;font-weight: bold;">Balance Due</td>
+          <td style="border:1px solid #fff;width: 200px;" id="due">
+            <i class="fa fa-rupee">&nbsp0.00</i>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <button id="get_bill">Get Bills</button>
+ </div>
+  <script src="js/business_asset.js"></script>
+</body>
+</html>

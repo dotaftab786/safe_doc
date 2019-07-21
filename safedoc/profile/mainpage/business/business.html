@@ -1,0 +1,60 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+	 BUSSINESS
+</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Jua|Do Hyeon|Nunito|Fascinate+Inline" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/business.css">
+<link rel="stylesheet" href="css/animate.css">
+</head>
+<body> 
+  <div id="business_box">
+      <img src="images/con_pic.png" alt="con_pic" id="main_pic" width="100" style="position: fixed; top: 0; left: 0;" />
+  <div id="contact_pic"></div>
+  <h2 align="center" style="padding: 0; margin: 0; font-family: 'Nunito',sans-serif;font-weight:bold;">Business Management System</h2>
+  <h5 align="center" style="padding: 0; margin: 0; font-family: 'Nunito',sans-serif;font-weight: 550;">Manage your all business details like voucher,ledger,tax,balance sheet and many more</h5>    
+  </div>
+    <div id="business_table_icon" >
+  <i class="fa fa-home" id="home"></i>
+  <button id="create_cmp">Create Company</button>
+  <p id="upload_notice" style="padding: 0; margin: 0;font-family: 'Nunito',sans-serif; color: red; font-size: 14px; position: absolute; top:70px; left: 50px; font-weight: bold;"></p>
+  <div id="business_form_box">
+    <div id="form_box">
+      <form id="form">
+        <input type="text" name="company_name" id="company_name" placeholder="Company name">
+        <input type="text" name="mailing_name" id="mailing_name" placeholder="mailing name  eg.abc.pvt.ltd">
+        <input type="text" name="address" id="address" placeholder="Address">
+        <input type="number" name="phone" id="mobile" placeholder="Mobile number">
+        <input type="tel" name="fax" id="fax" placeholder="Fax number">
+        <input type="email" name="email" id="email" placeholder="Email">
+         <input type="website" name="website" id="website" placeholder="Website">
+         <h4 style="color: white; padding: 0; margin: 0; font-family: 'Nunito',sans-serif; padding-left: 10px;">Financial year</h4>
+        <input type="date" name="finance" id="finance">
+         <h4 style="color: white; padding: 0; margin: 0; font-family: 'Nunito',sans-serif; padding-left: 10px;">Stock type</h4>
+         <select id="select">
+           <option value="accounts only">Accounts only</option>
+           <option value="accounts with inventory">Accounts with inventory</option>
+         </select>
+        <input type="submit" name="submit" value="create now" id="submit"> 
+      </form>
+    </div>
+  </div>
+  <i class="fa fa-trash" id="trash"></i>
+  <button id="del_cmp">Delete Company</button>
+  <p id="del_notice" style="padding: 0; margin: 0; position:absolute;top:160px; left: 80px; color: red; font-family: 'Nunito',sans-serif;"></p>
+  <div id="delete_condition">
+    <p id="del_text" style="padding: 0;margin:0;">Are u sure ?</p>
+     <button id="ok_btn">ok</button>
+      <button  id="del_btn" style="position: absolute; top:180px; left: 160px; background: white; width:80px; height: 30px; border:1px solid #ccc;">cancel</button>
+</div>
+  <i class="fa fa-sign-out" id="log"></i>
+  <button id="logout">Logout</button>
+  <h2 id="log_text" style="position: absolute; top:250px; left:50px; display: none;">please wait...</h2>
+    </div>
+  </div>
+  <script src="js/business.js"></script>
+</body>
+</html>

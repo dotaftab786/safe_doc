@@ -1,0 +1,277 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+Phone Directory
+</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+padding:0;
+margin:0;
+}
+#header{
+float:left;
+width:100%;
+border:1px solid #ccc;
+background:black;
+padding:10px;
+position:fixed;
+top:0;
+left:0;
+}
+#header h1{
+  color:white;
+  padding:0;
+  margin:0;
+  text-align:center;
+}
+#phone_box{
+ width:300px;
+ height:260px;
+ border-left:1px solid #ccc;
+ border-bottom:1px solid #ccc;
+ margin:100px auto;
+}
+#phone_box input{
+ width:250px;
+ height:40px;
+ border:1px solid black;
+ border-radius:5px;
+ background:white;
+ margin:10px;
+ font-family:'Nunito',sans-serif;
+ font-size:20px;
+}
+#phone_box input[type="text"]::placeholder{
+ font-family:'Nunito',sans-serif;
+ font-size:20px;
+ font-weight:bold;
+ padding-left:10px;
+}
+#phone_box input[type="number"]::placeholder{
+ font-family:'Nunito',sans-serif;
+ font-size:20px;
+ font-weight:bold;
+ padding-left:10px;
+}
+#phone_box h2{
+padding:0;
+margin:0;
+padding-left:10px;
+font-size:25px;
+}
+#phone_box button
+{
+float:left;
+width:130px;
+height:40px;
+background:black;
+border-radius:5px;
+color:white;
+border:none;
+margin-left:45%;
+margin-top:10px;
+cursor:pointer;
+}
+#phone_box button:hover{
+  background:green;
+  color:black;
+  transition:1s;
+  font-size:16px;
+  font-family:'Nunito',sans-serif;
+}
+#icon{
+ position:absolute;
+ top:80px;
+ left:38%;
+ width:20px;
+ height:20px;
+ background:black;
+ color:red;
+ border-radius:50%;
+ padding:5px;
+ text-align:center;
+}
+input:focus{
+ outline:none;
+}
+#subscriber_list{
+ width:300px;
+ height:100vh;
+ position:fixed;
+ top:70px;
+ right:0;
+ background:black;
+}
+#list_of_subscriber{
+ width:300px;
+ height:90vh;
+ background:black;
+ color:white;
+ overflow-y:scroll;
+}
+#list_of_subscriber::-webkit-scrollbar{
+ width:10px;
+}
+#list_of_subscriber::-webkit-scrollbar-track{
+ background:red;
+}
+#list_of_subscriber::-webkit-scrollbar-thumb{
+ background:yellow;
+ border-radius:5px;
+}
+#sub_text{
+ font-family:'Nunito',sans-serif;
+ font-weight:bold;
+ padding:0;
+ margin:0;
+ position:absolute;
+ left:41%;
+ top:45%;
+ color:green;
+ display:none;
+}
+#list_of_subscriber h1{
+ padding:0;
+ margin:10px;
+ font-family:'Nunito',sans-serif;
+ font-size:30px;
+ position:relative;
+}
+#name_list{
+list-style:none;
+padding:0;
+margin:0;
+}
+#trash{
+margin-left:200px;
+ cursor:pointer;
+ font-size:27px;
+}
+
+</style>
+</head>
+<body>
+<div id="header">
+<h1>Phone Directory</h1>
+</div>
+<i class="fa fa-plus" id="icon" ></i>
+<div id="phone_box">
+<form id="form_submit">
+<h2>Username</h2>
+<input required type="text" name="username" id="user" placeholder="username">
+<h2>Phone no</h2>
+<input required type="number" name="phone" id="phone" placeholder="phone no">
+<span id="sub_text">Success</span>
+<button id="btn">Add subscriber</button>
+</form>
+</div>
+<div id="subscriber_list">
+<div id="list_of_subscriber">
+<h1>List of subscriber</h1>
+<!--<fieldset>
+<legend>AFTAB ALAM</legend>
+<ul id="name_list">
+ <li>9971746885</li>
+ <i class="fa fa-trash" title="delete" id="trash"></i>
+ </ul>
+
+</fieldset>-->
+
+</div>
+</div>
+<script>
+  function add_subscriber()
+  {
+    var main_box = document.getElementById("list_of_subscriber");
+	 var i;
+   for(i=0;i<localStorage.length;i++)
+   {
+   var key = localStorage.key(i); 
+   if(key.indexOf("subscriber") != -1)
+   {
+    var fd = document.createElement("FIELDSET");
+	fd.style.borderLeft="none";
+	fd.style.borderRight="none";
+	fd.style.borderBottom="none";
+	var lg = document.createElement("LEGEND");
+	var ul = document.createElement("UL");
+	ul.setAttribute("id","name_list");
+	var li = document.createElement("LI");
+	var tr = document.createElement("I");
+	tr.setAttribute("class","fa fa-trash");
+	tr.setAttribute("id","trash");
+	tr.setAttribute("title","delete");
+	main_box.appendChild(fd);
+	fd.appendChild(lg);
+	fd.appendChild(ul);
+	ul.appendChild(li);
+	ul.appendChild(tr);
+	var get_data = localStorage.getItem(key);
+	var user_details = JSON.parse(get_data);
+	lg.appendChild(document.createTextNode(user_details.user_name));
+	li.appendChild(document.createTextNode(user_details.phone_no));
+	del_contact(tr,key);
+   }
+   }
+  }
+  add_subscriber();
+    
+	function del_contact(del_con,key)
+	{
+	   del_con.onclick=function()
+	   {
+	     var xyz = confirm('sure do u want to remove',"");
+		 if(xyz == true)
+		 {
+	      var ul = this.parentElement;
+		  var fd = ul.parentElement;
+		  fd.remove();
+		  localStorage.removeItem(key);
+		  }
+	   }
+	}
+ var s_btn = document.getElementById("btn");
+  s_btn.onclick = function()
+  {
+  var s_text = document.getElementById("sub_text");
+   var user_name = document.getElementById("user").value;
+   var phone_no = document.getElementById("phone").value;
+   var rg = /[0-9]/i;
+   if(user_name.match(rg) == null)
+   {
+     if(phone_no.length == 10)
+	 {
+	 if(phone_no.charAt(0) == 7 ||phone_no.charAt(0) == 8 ||phone_no.charAt(0) == 9)
+	 {
+	  s_text.style.display="block";
+    var frm = document.getElementById("form_submit");
+    frm.onsubmit=function()
+   {
+     var object={user_name:user_name,phone_no:phone_no};
+	 var data=JSON.stringify(object);
+	 localStorage.setItem(user_name+"subscriber",data);
+   }
+   }
+   else
+   {
+     alert("starting symbol should be 7 or 8 or 9");
+   }
+	 }
+	 else
+	 {
+	   alert("phone no length should be 10 digit");
+	   phone_no.value=" ";
+	 }
+   }
+   else
+   {
+        alert("not a valid name");
+	 window.location=location.href;
+	 return false;
+   }
+  }
+</script>
+</body>
+</html>

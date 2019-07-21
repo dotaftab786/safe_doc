@@ -1,0 +1,275 @@
+@charset "utf-8";
+*{
+	box-sizing: border-box;
+}
+body{
+	padding: 0;
+	margin:0;
+	overflow: hidden;
+}
+
+#business_box{
+	width: 100%;
+	position: fixed;
+	top:0;
+	left: 0;
+}
+#business_table_icon{
+	width: 300px;
+	height: 400px;
+	position: relative;
+	top:150px;
+	left: 40%;
+}
+#contact_pic{
+	width: 100px;
+	height:100px;
+	border-radius: 50%;
+	position: fixed;
+	border:2px solid #fff;
+	top:5px;
+	left: 10px;
+	background: white;
+	box-shadow: 0px 3px 3px #ccc;
+}
+#asset_logo{
+	width:150px;
+	height: 150px;
+	border:15px groove blue;
+   margin-top:20%;
+   margin-left: 20%;
+  border-radius: 50%;
+}
+#company_name{
+	padding: 0;
+	 margin: 0;
+	 position: absolute;
+	 left:35%;
+	 top:50%;
+	 font-size: 30px;
+	 text-shadow: 0px 3px 6px red;
+}
+#asset_box{
+	width:250px;
+	height: 300px;
+	border: 1px solid #ccc;
+	border-top:20px groove blue;
+	border-bottom:20px ridge blue;
+	margin-left: 55%;
+   margin-top: -15%;
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+#asset_box::scrollbar{
+	width: 7px;
+}
+#asset_box::-webkit-scrollbar{
+  width: 7px;
+}
+#asset_box::scrollbar-track{
+	background: black
+}
+#asset_box::-webkit-scrollbar-track{
+  background: black;
+}
+#asset_box::scrollbar-thumb{
+	background: pink;
+	border-radius: 5px;
+}
+#asset_box::-webkit-scrollbar-thumb{
+  background: pink;
+  border-radius: 5px;
+}
+#u_measure,#tax_setup,#s_voucher,#shut_company{
+   width: 200px;
+   background: white;
+   border: 1px solid #ccc;
+   margin: 20px;
+   padding: 10px;
+   text-align: left;
+   padding-left: 10px;
+   font-size: 17px;
+   font-family: 'Nunito',sans-serif;
+   cursor: pointer;
+   box-shadow: 0px 3px 3px 0px #ccc;
+}
+#u_measure:hover,#tax_setup:hover,#s_voucher:hover,#shut_company:hover{
+	background: black;
+	transition: 1s;
+	-webkit-transition:1s;
+	color: white;
+	box-shadow: 0px 0px 0px 0px #ccc;
+	border:none;
+	border-radius: 5px;
+}
+
+button:focus{
+	outline: none;
+}
+
+#secondary_content input{
+	width:100%;
+	padding: 5px;
+	margin-bottom:5px;
+	border-radius: 5px;
+	border:1px solid #ccc;
+	cursor: pointer;
+}
+
+#secondary_content input[type='submit']{
+  background: red;
+  border-radius: 5px;
+  border:none;
+  color: white;
+}
+input:focus{
+	outline: none;
+}
+#voucher_model{
+	width: 50%;
+	height: 85vh;
+	border:10px groove #ccc;
+	position: absolute;
+	left:25%;
+    top:70px;
+    padding: 10px;
+    overflow-y: scroll;
+    display: none;
+    z-index: 100;
+}
+#voucher_model::-webkit-scrollbar{
+	width: 10px;
+}
+#voucher_model::-webkit-scrollbar-track{
+	background: white;
+	box-shadow: inset 0px 0px 5px #ccc;
+	border-radius: 5px;
+}
+#voucher_model::-webkit-scrollbar-thumb{
+	background: black;
+}
+#voucher_icon{
+	width:150px;
+	padding: 10px;
+	background: white;
+	color: black;
+	border-radius: 5px;
+	border:1px solid #ccc;
+   float:right;
+   cursor: pointer;
+   font-size: 16px;
+}
+td{
+border:1px solid black;
+}
+#input_data td{
+	float: left;
+	width: 20%;
+	background: black;
+	border: none;
+	color: white;
+	font-family: 'Jua',sans-serif;
+	padding: 5px;
+	text-align: center;
+	margin-top: 10px;
+}
+#voucher_field h3{
+	margin:0;
+	padding: 0;
+}
+#voucher_field input{
+	width: 100%;
+	padding: 7px;
+	border-radius: 5px;
+	border:1px solid #ccc;
+}
+#add_item{
+	float: left;
+	background: white;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 16px;
+	font-family: 'Jua',sans-serif;
+	cursor: pointer;
+}
+#input_field td{
+	float: left;
+	width: 20%;
+	margin-top:5px;
+	border: none;
+}
+#input_field input{
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+#del_item{
+	text-align: center;
+}
+#tax_box{
+	float: left;
+	width: 97%;
+	height: 250px;
+	border:1px solid #ccc;
+	margin: 10px;
+	padding: 10px;
+	overflow-y: scroll;
+}
+#tax_left_cont{
+	width: 45%;
+	float: left;
+	padding: 5px;
+}
+#tax_right_cont{
+	width: 55%;
+	float: left;
+	padding: 5px;
+}
+#tax_right_cont h3{
+padding: 0;
+margin:0;
+font-family: 'Jua',sans-serif;
+font-weight: normal;
+float: left;
+margin-bottom: 10px;
+}
+#tax_right_cont p
+{
+	padding: 0;
+margin:0;
+font-family: 'Jua',sans-serif;
+font-weight: normal;
+float: left;
+padding-top: 5px;
+margin-bottom: 10px;
+}
+#tax_setup input{
+	height: 30px;
+	margin-bottom: 3px;
+  border-radius: 5px;
+  border:1px solid #ccc;
+}
+input[name="tax"]::placeholder{
+  font-family:'Nunito',sans-serif;
+  padding-left: 10px;
+}
+input[name="percentage"]::placeholder{
+  font-family:'Nunito',sans-serif;
+  padding-left: 10px;
+}
+#get_bill{
+	width: 100px;
+	height: 35px;
+	float: right;
+	background:black;
+	color:white;
+	border-radius: 5px;
+	border:1px solid black;
+	cursor: pointer;
+	font-size: 20px;
+	font-family: 'Nunito',sans-serif;
+}

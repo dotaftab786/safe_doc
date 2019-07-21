@@ -1,0 +1,265 @@
+@charset "utf-8";
+*{
+	box-sizing: border-box;
+}
+body{
+	padding: 0;
+	margin:0;
+	overflow: hidden;
+}
+#playlist_fixed_page{
+	width: 1200px;
+	height: 600px;
+	position: relative;
+	top: 20px;
+	left: 100px;
+	background:#ddd;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#video_box{
+	position: absolute;
+	top:60px;
+	overflow:hidden;
+}
+#video{
+    width: 854px;
+	height: 480px;
+	border:1px solid #ccc;	
+}
+#playlist_text{
+	font-family: 'Nunito',sans-serif;
+	color:violet;
+    padding:0;
+	margin: 0;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	text-shadow: 0px 3px 0px #000;
+}
+#playlist_song{
+	width: 345px;
+	height: 60px;
+	border-bottom:1px solid #ccc;
+	padding-top: 10px;
+	background: white;
+	position:fixed;
+	top:80px;
+	left: 69.8%;
+}
+#playlist_box{
+	width: 345px;
+	height: 480px;
+	background: white;
+	float: right;
+	position: fixed;
+	top: 140px;
+	left:69.8%;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+#song_list li{
+	font-family:'Nunito',sans-serif;
+	font-size: 23px;
+	border-bottom: 1px solid #ccc;
+	padding: 10px;
+}
+
+#playlist_box::-webkit-scrollbar{
+     width: 10px;
+     box-shadow: 0px 3px 6px #ccc;
+
+}
+#playlist_box::-webkit-scrollbar-track{
+		background: violet;
+}
+#playlist_box::-webkit-scrollbar-thumb{
+	background: black;
+	border-radius: 5px;
+}
+
+#playlist_footer{
+	width: 70%;
+	height: 60px;
+	float: left;
+	margin-top: 470px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+#setting,#play,#back,#next,#stop,#volume,#fullscreen,#replay,#download,#setting{
+	float: left;
+	font-size: 25px;
+	width: 40px;
+	 height: 40px;
+	  color: violet;
+	  text-shadow: 0px 3px 6px #ccc; 
+	  cursor: pointer;
+	 background: white;
+	 padding-top: 8px; 
+	 padding-left: 10px;
+	 border-radius: 50%;
+	 box-shadow: 0px 10px 20px #ddd;
+}
+#play{
+	margin-right: 20px;
+}
+#back{
+	padding-left: 3px;
+	margin-right: 5px;
+}
+#stop{
+	padding-right:10px; 
+	margin-right: 5px;
+}
+#setting{
+margin-right: 10px;
+}
+#progress_bar{
+	width: 350px;
+	height: 40px;
+	float: left;
+	background: white;
+	float: left;
+	margin-right: 20px;
+	position: relative;
+}
+#buffer{
+	position: absolute;
+	width: 0%;
+	height: 100%;
+	background: #ccc;
+}
+#progress{
+	position: absolute;
+	width: 0%;
+	height: 100%;
+	background: black;
+}
+#volume{
+	margin-right: 10px;
+}
+#replay{
+	margin-right: 20px;
+}
+
+#next{
+	margin-right: 20px;
+}
+#fullscreen{
+	margin-right: 10px;
+}
+#range_slider{
+	appearance:none;
+	-webkit-appearance:none;
+	transform: rotate(270deg);
+	width: 70px;
+	height: 5px;
+	position: absolute;
+	left: -15px;
+	top: -30px;
+	border:1px solid red;
+	display: none;
+}
+#range_slider::-webkit-slider-thumb{
+	appearance:none; 
+	-webkit-appearance:none;
+	width: 12px;
+	height: 12px;
+	border:1px solid green;
+	border-radius: 50%;
+	background: white;
+}
+#range_slider:focus{
+	outline: none;
+}
+#miniplayer{
+	width: 170px;
+	height:0;
+	position: absolute;
+	top: 288px;
+	left: 56%;
+	background: #ddd;
+	overflow: hidden;
+}
+
+#speed_value{
+	width: 30px;
+	border:none;
+	text-align:center;
+	padding-right:9px;
+}
+#reset_btn{
+    background: white;
+    border: none;
+    color: red;
+    cursor: pointer;
+    outline: none;
+}
+
+#speed_slider{
+	-webkit-appearance:none;
+	width: 167px;
+	height: 3px;
+	background: black;
+}
+
+#speed_slider::-webkit-slider-thumb{
+	-webkit-appearance:none;
+	appearance:none;
+	width: 12px;
+	height: 12px;
+	border:1px solid green;
+	border-radius: 50%;
+	background: white;
+}
+#speed_slider:focus{
+	outline: none;
+}
+
+#miniplayer_con{
+	list-style: none;
+	padding:5px;
+	margin:5px;
+	font-size: 18px;
+}
+#miniplayer_con input{
+	width: 25px;
+	margin-top: 10px;
+}
+
+#reset_theme{
+	background: white;
+	border:none;
+	width: 80%;
+	margin-left: 20px;
+	margin-top: 5px;
+	height: 30px;
+	cursor: pointer;
+	box-shadow: 3px 3px 6px #000;
+	outline: none;
+}
+#reset_theme:hover{
+	background: black;
+	color: white;
+	font-family: 'Nunito',sans-serif;
+	font-size: 18px;
+	text-shadow: 0px 3px 6px violet;
+	transition: 0.5s;
+	outline: none;
+}
+#mini_video_player{
+	width:256px;
+	height: 144px;
+	 position: fixed;
+	right: 10px;
+	bottom: 1px;
+}
+#mini_video{
+	width:256px;
+	height: 170px;
+	position: fixed;
+	bottom: 0;
+	right: 10px;
+	background: #ddd;
+	display: none;
+}

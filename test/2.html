@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+<button onclick="store()">store</button>
+<button onclick="read()">read</button>
+<button onclick="del()">delete</button>
+<script>
+function store()
+{
+document.cookie="user=aftab; expires=Thu, 18 Dec 2019 12:00:00 UTC; path=/";
+}
+
+function read()
+{
+alert(document.cookie);
+}
+function del()
+{
+ document.cookie="user=;expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+}
+</script> 
+</body>
+</html>

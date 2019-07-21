@@ -1,0 +1,72 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+	CONTACT
+</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Jua|Do Hyeon|Nunito|Fascinate+Inline" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+ <div id="main_contact_page">
+  <div id="login_box" style="width: 200px;height:70px;background: black; color: white; margin: 20px auto; display:none; border-radius: 5px;">
+  <h5 id="last_login_text" align="center" style="padding: 0; margin: 0; font-family: 'Nunito',sans-serif;" ></h5>
+</div>
+ 	<img src="images/con_pic.png" alt="con_pic" id="main_pic" width="100" style="position: fixed; top: 0; left: 0;" />
+ 	<div id="contact_pic"></div>
+ 	<h1 align="center" id="private_con"style="font-size: 45px; color: violet;margin-top: 50px;">Private Contacts</h1>
+ 	<div id="contact_input_box">
+ 		<form id="reset_data">
+ 			<input type="text" name="fullname" placeholder="Fullname" id="fullname">
+ 			<input type="number" name="primary-number" placeholder="Primary Number" id="contact_input1">
+ 			<input type="number" name="secondary-number" placeholder="Secondary Number" id="contact_input2">
+ 			<input type="button" name="add" value="Add" id="contact_add" onclick="check_input_field()">
+ 			<span id="cont_success" style="font-family: 'Nunito',sans-serif; font-size: 15px; color: green; margin-left: 20px; display: none;">Successfully Add</span>
+ 		</form>
+ 	</div>
+ 	<div id="contact_details" >
+ 		<div id="all_contact_info">
+ 			<h1 id="contact_text" style="color: white; font-size: 30px;" align="left">Contact List</h1>
+ 			<form autocomplete="off">
+ 		<input type="search" name="search" placeholder="search contact here" oninput="search_contact(this)">
+ 		</form>
+ 		<div id="contacts"> 
+       <!-- <fieldset>
+       	<legend>Aftab Alam</legend>
+       	<ol id="ol_design">
+       		<li>9971746885</li>
+       		<li>8368965806</li>
+       		<i class="fa fa-trash" id="del_icon"></i>
+       		<i class="fa fa-edit" id="edit_icon"></i>
+       	</ol>
+       </fieldset> -->
+ 		</div>
+ 	</div>
+ 	</div>
+ 	 <div id="restore_icon" style="width: 290px; background:white; position: fixed;bottom: 0; right: 10px;font-size: 16px; font-family: 'Nunito',sans-serif; padding: 1px; z-index: 100;">
+     <i class="fa fa-sign-out" onclick="logout()" style="padding: 5px;cursor: pointer;"></i><span>Logout</span>
+     <i class="fa fa-refresh" onclick="restore()" style="margin-left: 45px; padding: 5px; padding-right: 10px; font-size: 14px;cursor: pointer;"></i><span>Restore Contacts</span>
+ </div> 
+ 	<div id="restore">
+ 	<h1 align="center" id="del_text" style="color: violet;"></h1>	
+     <i class="fa fa-times-circle" onclick="cross_btn()" style="position: absolute; top:30px; left: 95%; color: red; cursor: pointer;"></i>
+     <div id="tables" style="margin-left: 15%;">
+     	<table id="restore_table">
+     		<tr>
+     			<th>Contacts name</th>
+     			<th>Primary Number</th>
+     			<th>Secondary Number</th>
+     			<th>Restore Now</th>
+     		</tr> 
+     	</table>
+     </div>
+ 
+ </div>
+ </div>
+ 
+  <script src="js/contact.js"></script>
+</body>
+</html>

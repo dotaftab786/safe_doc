@@ -1,0 +1,148 @@
+@charset "utf-8";
+*{
+	box-sizing: border-box;
+}
+body{
+	padding: 0;
+	margin:0;
+	overflow: hidden;
+}
+
+#business_box{
+	width: 100%;
+	position: fixed;
+	top:0;
+	left: 0;
+}
+#business_table_icon{
+	width: 300px;
+	height: 400px;
+	position: relative;
+	top:150px;
+	left: 40%;
+}
+#contact_pic{
+	width: 100px;
+	height:100px;
+	border-radius: 50%;
+	position: fixed;
+	border:2px solid #fff;
+	top:5px;
+	left: 10px;
+	background: white;
+	box-shadow: 0px 3px 3px #ccc;
+}
+#home,#trash,#log{
+	width: 50px;
+	position: absolute;
+	height: 50px;
+	font-size: 40px;
+	background: violet;
+	color: white;
+	border: 2px solid violet;
+	border-radius: 5px;
+	padding-left: 8px;
+	cursor: pointer;
+}
+#create_cmp,#del_cmp,#logout{
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  left: 61px;
+  background: inherit;
+  border: 2px solid violet;
+  font-family: "Nunito",sans-serif;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer; 
+
+}
+#trash,#del_cmp{
+	margin-top: 100px;
+}
+#log,#logout{
+	margin-top: 200px;
+}
+
+button:focus{
+	outline: none;
+}
+#business_form_box{
+	width: 361px;
+	height: 0px;
+	background:black;
+	position:fixed;
+	top:191px;
+	z-index: 100;
+	overflow-y: scroll;
+	display: block;
+}
+#form_box{
+	width:100%;
+	position: absolute;
+}
+#company_name,#mailing_name,#address,#mobile,#email,#fax,#website,#finance,#select{
+	width: 300px;
+	height: 40px;
+	border:1px solid #ccc;
+	margin: 10px;
+	border-radius: 3px;
+	font-size: 20px;
+	font-family: 'Nunito',sans-serif;
+}
+ #form_box input::placeholder{
+ 	font-family: 'Nunito',sans-serif;
+   font-size: 18px;
+   padding-left: 10px;
+}
+
+input:focus{
+	outline: none;
+}
+#submit{
+	width: 150px;
+	background:blue;
+     font-family: 'Nunito',sans-serif;
+     font-size: 20px;
+     border-radius: 10px;
+     margin-left: 20%;
+     margin-bottom: 10px;
+     color: white;
+     cursor: pointer;
+     border: none;
+     padding: 5px;
+}
+#business_form_box::-webkit-scrollbar{
+  width: 10px;
+}
+#business_form_box::-webkit-scrollbar-track{
+  background:#ccc;
+}
+#business_form_box::-webkit-scrollbar-thumb{
+	background: violet;
+	border-radius: 5px;
+}
+
+#delete_condition{
+	width: 300px;
+	height: 60px;
+	position: relative;
+	display: none;
+}
+
+#ok_btn,#del_btn{
+	position: absolute;
+	top:180px; 
+	left: 80px;
+	background: white;
+	width:80px;
+	height: 30px;
+    border:1px solid #ccc;
+    cursor: pointer;
+}
+
+#del_text{
+	position: absolute;
+	top:150px;
+	left: 80px;
+}

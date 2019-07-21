@@ -1,0 +1,87 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+	PLAYLIST
+</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Jua|Do Hyeon|Nunito|Fascinate+Inline" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/playlist.css">
+</head>
+<body> 
+    <div id="playlist_fixed_page">
+    <h1 id="playlist_text">Welcome to playlist video</h1>
+<i class="fa fa-thumbs-up" style="position: absolute; top:10px;left: 81%; cursor: pointer; font-size: 35px;"></i>
+<i class="fa fa-thumbs-down" style="position: absolute; top:10px; left: 87%; cursor: pointer;font-size: 35px;"></i>
+<i class="fa fa-share" style="position: absolute; top:10px; left: 93%; cursor: pointer;font-size: 35px;"></i>
+      
+
+      <div id="video_box">
+        <video id="video">
+          <source id="video_source">
+        </video>
+        <input type="file" accept="video/*" id="upload_btn">
+      </div>
+      <div id="playlist_song">
+           <h1 align="center" id="favourite_song" style="padding: 0; margin: 0; font-size:35px;font-family: 'Jua',sans-serif;text-shadow: 0px 3px 0px #fff;">Favourite Songs
+        <i class="fa fa-plus" style="font-size: 27px;border-radius:50%; width: 35px; height: 35px; background: violet; color: white;box-shadow: 0px 3px 6px #fff; padding-top: 4px; cursor: pointer;"></i>
+           </h1>
+         </div>
+      <div id="playlist_box">
+         <div id="song_list_box">
+         <ol id="song_list">
+          <li style="padding-top:0;">Java Script video</li>
+          <li>Java Script video</li>
+          <li>Java Script video</li>
+          <li>Java Script video</li>
+          <li>Java Script video</li>
+          <li>Java Script video</li>
+          <li>Java Script video</li>
+          <li>Java Script video</li>
+          <li>Java Script video</li>
+          <li>Java Script video</li>
+         </ol>
+       </div>
+     </div>
+     <footer id="playlist_footer">
+       <i class="fa fa-play" title="Play" id="play"></i>
+       <i class="fa fa-backward" title="Previous" id="back"></i>
+       <i class="fa fa-stop" title="Stop" id="stop"></i>
+       <i class="fa fa-forward" title="next" id="next"></i>
+       <i class="fa fa-undo" title="replay" id="replay"></i>
+       <div id="progress_bar">
+        <div id="buffer"></div>
+         <div id="progress"></div>
+       </div>
+      <i class="fa fa-gear" title="Setting" id="setting"></i>
+       <div id="miniplayer" style=" display: block;">
+        <h4 id="Speed" style="padding: 10px; margin: 0; float: left;">Speed:</h4>
+        <input type="number" name="number" value="1" id="speed_value" style="margin-top: 13px; background: inherit;" />
+        <button id="reset_btn">Reset</button>
+        <input type="range" name="slider" value="1" min="0" max="9" step="1" id="speed_slider">
+        <ul id="miniplayer_con">
+          <li><i class="fa fa-clone" style="cursor: pointer;" id="mini_icon"></i>&nbsp;&nbsp;&nbsp;Miniplayer</li>
+          <li><input type="color" name="color" id="c_theme">&nbsp;Container theme</li>
+           <li><input type="color" name="color" id="i_theme">&nbsp;&nbsp;Icon theme</li>
+           <li><input type="color" name="color" id="t_theme">&nbsp;&nbsp;Text theme</li>
+        </ul>
+        <button id="reset_theme">Reset themes</button>
+        </div>
+   <i class="fa fa-volume-up" title="Volume" id="volume" style="position: relative;">
+     <input type="range" name="range" min="0" max="1" step="0.1" id="range_slider">
+   </i>
+   <i class="fa fa-expand" title="Fullscreen" id="fullscreen"></i>
+   <i class="fa fa-download" title="download" id="download"></i>
+     </footer>
+    </div>
+    <div id="mini_video">
+      <h5 style="padding: 0; margin: 0; font-family: 'Nunito',sans-serif;" id="mini_text">welcome to playlist video</h5>
+      <i class="fa fa-clone" title="maximize" id="mini_video_close" style="position: absolute; right: 7px; bottom:147px;cursor:pointer;z-index: 100"></i>
+      <video id="mini_video_player">
+        <source id="mini_video_source">
+      </video>
+    </div>
+  <script src="js/playlist.js"></script>
+</body>
+</html>
