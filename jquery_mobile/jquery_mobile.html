@@ -1,0 +1,148 @@
+<!Doctype html>
+<html>
+<head>
+<title>
+</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="css/jmobile.css">
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+ <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+ <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script src="js/swipeupdown.js"></script>
+ <script src="js/action.js"></script>
+</head>
+<body>
+	<div data-role="page" id="homepage">
+		<div data-role="main" class="ui-content">
+			<div id="brand" align="center">
+			<img src="images/logo.png" width="80%">
+			<span id="app_name">Developer's</span>
+		    </div>
+		</div>
+		<div data-role="footer" data-position="fixed" id="footer">
+			<div data-role="navbar" data-grid="a">
+				<ul>
+					<li><a href="#" class="ui-btn ui-icon-power ui-btn-icon-top">close</a></li>
+					<li><a href="#go "id="go_link" data-rel="popup" data-transition="pop" data-position-to="window" class="ui-btn ui-icon-action ui-btn-icon-top">go</a></li>
+				</ul>
+				<div id="go" data-role="popup" data-overlay-theme="b">
+					<a data-rel="back" class="ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-btn-right ui-alt-icon" >close</a>
+
+					<div data-role="header" data-position="fixed" id="con_header">
+		               <h1>Welcome</h1>
+					</div>
+					<div data-role="main" class="ui-content" id="main_con">
+						<form id="form-submit">
+							<div class="ui-grid-solo">
+								<div class="ui-block-a">
+							<input type="text" name="firstname" id="firstname" placeholder="firstname">
+						</div>
+						<div class="ui-block-a">
+							<input type="text" name="lastname" id="lastname" placeholder="lastname">
+						</div>
+                         </div>
+						<div class="ui-grid-a">
+							<div class="ui-block-a">
+								<input type="submit" value="Erase" class="ui-btn" data-theme="b"  style="border-radius: 7px;">
+							</div>
+							<div class="ui-block-b">
+								<input type="submit" value="Save"class="ui-btn" data-theme="b" style="border-radius: 7px;">
+							</div>
+						</div>
+					</form>
+					</div>
+					<div data-role="footer" data-position="fixed" id="con_footer">
+						<h1>Powerd by Developr's</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="welcome">
+		<div data-role="panel" id="menu" data-display="overlay" data-position="right" data-swipe-close="false" data-dismissible="false">
+          <ul data-role="listview" data-theme="b" data-split-theme="a" data-split-icon="fb">
+          	<li data-keyword="html">
+          		<a href="#">
+          		<img src="images/html.png" width="80" height="80">
+          		<h1>HTML</h1>
+          		<p>Hypertext Markup Language</p>
+          	</a>
+          </li>
+          <li data-keyword="css">
+          		<a href="#">
+          		<img src="images/css.png" width="80" height="80">
+          		<h1>CSS</h1>
+          		<p>Cascading Style Sheet</p>
+          	</a>
+          </li>
+          <li data-keyword="javascript">
+          		<a href="#">
+          		<img src="images/javascript.jpg" width="80" height="80">
+          		<h1>JAVASCRIPT</h1>
+          		<p>Scripting Language</p>
+          	</a>
+          </li>
+          <li data-keyword="jquery">
+          		<a href="#">
+          		<img src="images/jquery.jpg" width="80" height="80">
+          		<h1>JQUERY</h1>
+          		<p>Java Script Framework</p>
+          	</a>
+          </li>
+          <li data-keyword="share">
+          		<a href="#">
+          		<img src="images/share.jpg" width="80" height="80">
+          		<h1>Share on social media</h1>
+          		<p>social media platform</p>
+          		<a href="#"></a>
+          	</a>
+          </li>
+          </ul>
+		</div>
+		<div data-role="header" data-position="fixed" id="welcome_header">
+			<a href="#menu" data-transition="turn" data-icon="bars" id="icon_bars"></a>
+			<h1 id="app_user_data"></h1>
+		</div>
+		<div data-role="main" class="ui-content" id="video_content">
+			<br>
+			<form id="search_youtube_data">
+				<input type="search" name="search" id="search_video" placeholder="search content">
+			</form>
+			<br>
+			<ul id="list_video_item" data-role="listview" data-theme="b">
+			</ul>
+				<center>
+			<i class="fa fa-spinner fa-spin" id="fa_spinner" style="font-size: 30px;color: blue; display: none;"></i>
+		</center>
+			<br>
+		 <div data-role="navbar" id="prev_next">
+		 	<ul>
+		 		<li><a href="#" id="prev" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">Prev</a></li>
+		 		<li><a href="#" id="next" class="ui-btn ui-icon-arrow-r ui-btn-icon-right">Next</a></li>
+		 	</ul>
+		 </div>
+		<div data-role="footer" data-position="fixed" id="welcome_footer">
+	     <div data-role="navbar">
+	     	<ul data-grid="b">
+	     	<li><a href="#" data-rel="back" data-direction="reverse" data-icon="arrow-l"></a></li>
+	     		<li> <a href="#setting" data-icon='gear' data-rel="popup" data-transition="pop" data-position-to="window"></a></li>
+	     		<li><a href="#" data-icon="phone"></a></li>
+	     	</ul>
+	     </div>
+          <div id="setting" data-role="popup" data-overlay-theme="b">
+          	<div data-role="header" data-position="fixed" id="setting_header">
+          	<p>&nbsp;&nbsp;&nbsp;&nbsp;change homepage video</p>
+          </div>
+          <div data-role="main" class="ui-content" id="setting_cont">
+          	<form id="keyword_form">
+          	<input type="text" name="keyword" id="input_keyword" value="Enter data">
+          	<input type="submit" name="keyword" value="save" data-theme="b">
+          </form>
+      </div>
+          </div>
+		</div>
+	</div>
+</body>
+</html>

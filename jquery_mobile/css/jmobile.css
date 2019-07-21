@@ -1,0 +1,107 @@
+@charset "UTF-8";
+#homepage{
+	background-color: white;
+	overflow: hidden;
+}
+#brand{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+#app_name{
+	font-size: 25px;
+    font-family: 'Orbitron',sans-serif;
+    text-shadow: 3px 5px 7px red;
+}
+#footer{
+	display: none;
+}
+#footer .ui-btn{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border:none;
+	-webkit-background:radial-gradient(blue,black);
+	-moz-background:radial-gradient(blue,black);
+   background:radial-gradient(blue,black);
+    color: white;
+      text-shadow: none;
+       font-family: 'Orbitron',sans-serif;
+      
+}
+
+#con_header,#con_footer,#welcome_header,#welcome_footer,#setting_header{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border:none;
+	-webkit-background:radial-gradient(blue,black);
+	-moz-background:radial-gradient(blue,black);
+   background:radial-gradient(blue,black);
+    color: white;
+     font-family: 'Orbitron',sans-serif;
+    text-shadow: none;
+}
+#welcome_footer .ui-btn{
+	background-color: inherit;
+	color: inherit;
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+    text-shadow: none;
+}
+#welcome_footer ul li{
+	padding:1px;
+}
+#setting{
+	max-width: 250px;
+}
+#go{
+	max-width: 300px;
+	min-height: 300px;
+}
+#main_con{
+	margin-top: 40px;
+}
+input[type="text"]::placeholder{
+	font-size: 16px;
+	color: blue;
+	font-family: 'Orbitron',sans-serif;
+}
+#icon_bars{
+	font-size: 20px;
+	color:white;
+}
+#welcome_header .ui-btn:focus{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+    background-color: black;
+}
+.ui-icon-fb:after{
+	background-image:url("../images/fb_icon.png");
+	background-size: 30px 25px;
+}
+#prev_next .ui-btn{
+	background: radial-gradient(red,black);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-radius: 5px;
+	color:white;
+	-webkit-text-shadow: none;
+	-moz-text-shadow: none;
+    text-shadow: none;
+    display: none;
+}
+#setting{
+	max-width: 300px;
+	max-height: 170px;
+	font-size: 15px;
+}
+#setting_cont{
+	margin-top:50px;
+	margin-bottom: 20px;
+}
